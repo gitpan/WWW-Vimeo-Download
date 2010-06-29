@@ -10,12 +10,13 @@ WriteMakefile(
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
       ? ('LICENSE'=> 'perl')
       : ()),
-    PL_FILES            => {},
+    EXE_FILES	=> ['script/vimeo-dl'],
     PREREQ_PM => {
-        'Test::More' => 0,
-        'LWP::UserAgent' => 0,
+        'Test::More' 		=> 0,
+        'LWP::UserAgent' 	=> 0,
 	'HTTP::Request::Common' => 0,
-	'XML::Simple' => 0
+	'XML::Simple' 		=> 0,
+	'Getopt::Long'		=> 0
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'WWW-Vimeo-Download-*' },

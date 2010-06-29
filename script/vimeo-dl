@@ -1,0 +1,114 @@
+#!/usr/bin/perl
+
+use WWW::Vimeo::Download;
+
+use Getopt::Long;
+
+use warnings;
+use strict;
+
+=head1 NAME
+
+vimeo-dl - Vimeo video download script
+
+=head1 VERSION
+
+Version 0.02
+
+=cut
+
+our $VERSION = '0.02';
+
+
+=head1 SYNOPSIS
+
+ vimeo-dl [OPTIONS]
+
+ Options:
+   --id   	- the video's id to download
+   --file	- the file where to save the video
+
+=cut
+
+my ($id, $output);
+
+my $getopt  = Getopt::Long::GetOptions(
+	'id=s'    => \$id,
+	'file=s'  => \$output
+);
+
+my $video = WWW::Vimeo::Download -> new($id);
+
+$video -> download($output);
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<--id>
+
+The ID of the video to download
+
+=item B<--file>
+
+The path where to save the downloadedvideo
+
+=back
+
+=head1 AUTHOR
+
+Alessandro Ghedini, C<< <alexbio at cpan.org> >>
+
+=head1 BUGS
+
+Please report any bugs or feature requests to C<bug-www-vimeo-download at rt.cpan.org>, or through
+the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=WWW-Vimeo-Download>.  I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc vimeo-dl
+
+You can also look for information at:
+
+=over 4
+
+=item * Homepage
+
+L<http://alexlog.co.cc/projects/www-vimeo-download>
+
+=item * Git Repository
+
+L<http://github.com/AlexBio/WWW-Vimeo-Download>
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-Vimeo-Download>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/WWW-Vimeo-Download>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/WWW-Vimeo-Download>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/WWW-Vimeo-Download/>
+
+=back
+
+=head1 LICENSE AND COPYRIGHT
+
+Copyright 2010 Alessandro Ghedini.
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+
+=cut

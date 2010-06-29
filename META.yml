@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               WWW-Vimeo-Download
-version:            0.01
+version:            0.02
 abstract:           Very simple Vimeo video downloader.
 author:
     - Alessandro Ghedini <alexbio@cpan.org>
@@ -11,6 +11,7 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
+    Getopt::Long:         0
     HTTP::Request::Common:  0
     LWP::UserAgent:       0
     Test::More:           0

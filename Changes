@@ -1,5 +1,23 @@
-Revision history for WWW-Vimeo-Download
+commit 97183e65f41e448559092e7c77323544245c841a
+Author: Alessandro Ghedini <al3xbio@gmail.com>
+Date:   Tue Jun 29 16:20:59 2010 +0200
 
-0.01    Date/time
-        First version, released on an unsuspecting world.
+    update VERSION
 
+commit 4ab0bea0e03510e776e65f7a0b6bcd9abbb27784
+Author: Alessandro Ghedini <al3xbio@gmail.com>
+Date:   Tue Jun 29 16:17:48 2010 +0200
+
+    add vimeo-dl script
+
+commit 96702b9d4233f81264cbcaa083544db941d11bf3
+Author: Alessandro Ghedini <al3xbio@gmail.com>
+Date:   Sat Jun 12 14:48:23 2010 +0200
+
+    final clean-up
+
+commit d11cf2df31556c610b2c047c3aee91c5a3e1a95b
+Author: Alessandro Ghedini <al3xbio@gmail.com>
+Date:   Fri Jun 11 22:57:20 2010 +0200
+
+    first commit
