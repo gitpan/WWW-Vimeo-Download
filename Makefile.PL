@@ -1,23 +1,19 @@
-use strict;
-use warnings;
-use ExtUtils::MakeMaker;
 
+
+use ExtUtils::MakeMaker;
+# See lib/ExtUtils/MakeMaker.pm for details of how to influence
+# the contents of the Makefile that is written.
 WriteMakefile(
-    NAME                => 'WWW::Vimeo::Download',
-    AUTHOR              => q{Alessandro Ghedini <alexbio@cpan.org>},
-    VERSION_FROM        => 'lib/WWW/Vimeo/Download.pm',
-    ABSTRACT_FROM       => 'lib/WWW/Vimeo/Download.pm',
-    ($ExtUtils::MakeMaker::VERSION >= 6.3002
-      ? ('LICENSE'=> 'perl')
-      : ()),
-    EXE_FILES	=> ['script/vimeo-dl'],
-    PREREQ_PM => {
-        'Test::More' 		=> 0,
-        'LWP::UserAgent' 	=> 0,
-	'HTTP::Request::Common' => 0,
-	'XML::Simple' 		=> 0,
-	'Getopt::Long'		=> 0
-    },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'WWW-Vimeo-Download-*' },
+    NAME         => 'WWW::Vimeo::Download',
+    VERSION_FROM => 'lib/WWW/Vimeo/Download.pm', # finds \$VERSION
+    AUTHOR       => 'Hernan Lopes',
+    ABSTRACT     => 'interface to download vimeo videos',
+    PREREQ_PM    => {
+                     'Test::Simple' => 0.44,
+                     'Moose'=>0,
+                     'XML::XPath'=>0,
+                     'LWP::UserAgent'=>0,
+                     'HTTP::Request'=>0,
+                     'Perl6::Form'=>0,
+                    },
 );
