@@ -5,7 +5,7 @@ use HTTP::Tiny;
 #use Perl6::Form;
 use utf8;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 my $VER = $VERSION;
 
 has video_id => (
@@ -157,7 +157,6 @@ tr/àáâãäçèéêëìíîïñòóôõöùúûüýÿÀÁÂÃÄÇÈÉÊËÌÍ�
 sub set_download_url {
     my ($self) = @_;
 
-use Data::Printer;
     my $res = $self->browser->get( 'http://www.vimeo.com/' . $self->video_id );
     my ( $signature ) = $res->{content} =~ m/"signature":"([^"]+)"/g;
     my ( $timestamp ) = $res->{content} =~ m/"timestamp":(\d+)/g;
