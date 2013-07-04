@@ -1,11 +1,11 @@
 package WWW::Vimeo::Download;
 use Moose;
 use HTTP::Tiny;
-use HTTP::Request;
-use Perl6::Form;
+#use HTTP::Request;
+#use Perl6::Form;
 use utf8;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 my $VER = $VERSION;
 
 has video_id => (
